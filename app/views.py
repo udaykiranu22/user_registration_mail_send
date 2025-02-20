@@ -24,3 +24,9 @@ def registration(request):
         else:
             return HttpResponse('invaild data')
     return render(request, 'registration.html', d)
+
+def home(request):
+    return render(request, 'homepage.html')
+
+def user_login(request):
+    return render(request, 'loginpage.html')
