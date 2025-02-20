@@ -17,8 +17,8 @@ def registration(request):
             MUMFDO.save()
 
             MPMFDO = NMPMFDO.save(commit=False)
-            MUMFDO.user_name = MUMFDO
-            MUMFDO.save()
+            MPMFDO.user_name = MUMFDO
+            MPMFDO.save()
             send_mail('registration successfully', 'your registration is successfully done.','lordmax414@gmail.com',[MUMFDO.email], fail_silently = False)
             return HttpResponse('registration successfully done.')
         else:
